@@ -80,7 +80,7 @@ class Calculator extends Component {
 
       try {
         this.setState({
-          result: (eval(checkResult) || "" ) + ""
+          result: (eval(checkResult) || "0" ) + ""
         })
       } catch (e) {
         this.setState({
