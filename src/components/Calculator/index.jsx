@@ -40,10 +40,8 @@ class Calculator extends Component {
       this.reset()
     } else if (button === "CE") {
       this.backspace()
-    } else if (button === "Sqrt") {
-      this.calcuateSqrt()
-    } else if (button === "x^y") {
-      this.calcuateExp()
+    } else if (button === "√") {
+      this.calculateSqrt()
     } else {
       this.setState({
         result: this.state.result + button
@@ -52,7 +50,7 @@ class Calculator extends Component {
   };
 
   // SQRT calculation
-  calcuateSqrt = () => {
+  calculateSqrt = () => {
     var checkSqrtResult = ''
     if (this.state.result.includes('--')) {
       checkSqrtResult = this.state.result.replace('--','+')
@@ -63,26 +61,6 @@ class Calculator extends Component {
     try {
       this.setState({
         result: (eval(Math.sqrt(checkSqrtResult)) || "" ) + ""
-      })
-    } catch (e) {
-      this.setState({
-        result: "error"
-      })
-    }
-  }
-
-  // expontenation calculation
-  calcuateExp = () => {
-    var checkExpResult = ''
-    if (this.state.result.includes('--')) {
-      checkExpResult = this.state.result.replace('--','+')
-    } else {
-      checkExpResult = this.state.result
-    }
-
-    try {
-      this.setState({
-        result: (eval(Math.pow(checkExpResult, checkExpResult)) || "" ) + ""
       })
     } catch (e) {
       this.setState({
