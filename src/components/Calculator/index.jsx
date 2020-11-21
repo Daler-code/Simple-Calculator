@@ -27,11 +27,6 @@ class Calculator extends Component {
     }
   }
 
-  // mount the component for test
-  componentDidMount () {
-    console.log('calculator mounted');
-  };
-
   // keypad click
   onClick = button => {
     if (button === "=") {
