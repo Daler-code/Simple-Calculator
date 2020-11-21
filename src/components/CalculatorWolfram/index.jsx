@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CalculatorResultWalfram from '../CalculatorResultWalfram';
-import CalculatorKeypadWalfram from '../CalculatorKeypadWalfram';
+import CalculatorResultWolfram from '../CalculatorResultWolfram';
+import CalculatorKeypadWolfram from '../CalculatorKeypadWolfram';
 
 // style
 const Container = styled.div`
@@ -18,13 +18,14 @@ const Container = styled.div`
   padding-top: 20px;
 `;
 
-const CalculatorWalfram = () => {
+
+const CalculatorWolfram = () => {
   return (
     <Container>
-      <CalculatorResultWalfram />
-      <CalculatorKeypadWalfram />
+      <CalculatorResultWolfram />
+      <CalculatorKeypadWolfram />
     </Container>
   );
 };
 
-export default CalculatorWalfram;
+export default CalculatorWolfram;

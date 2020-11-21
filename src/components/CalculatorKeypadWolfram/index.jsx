@@ -9,7 +9,7 @@ import {
   ColumnTwo
 } from './styles';
 
-const CalculatorKeypadWalfram = () => {
+const CalculatorKeypadWolfram = () => {
 
   return (
     <Container>
@@ -47,4 +47,4 @@ const CalculatorKeypadWalfram = () => {
 };
 
 
-export default CalculatorKeypadWalfram;
+export default CalculatorKeypadWolfram;

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Radio } from 'antd';
 
 import Calculator from './components/Calculator';
-import CalculatorWalfram from './components/CalculatorWalfram';
+import CalculatorWolfram from './components/CalculatorWolfram';
 
 const Container = styled.div`
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,8 +38,18 @@ const App = () => {
     <Fragment>
       <Row> 
         <Radio.Group>
-          <Radio.Button style={BtnStyle} onClick={() => setToggleBtn(false)}>Native App</Radio.Button>
-          <Radio.Button style={BtnStyle} onClick={() => setToggleBtn(true)}>Wolphram App</Radio.Button>
+          <Radio.Button 
+            style={BtnStyle} 
+            onClick={() => setToggleBtn(false)}
+          >
+            Native App
+          </Radio.Button>
+          <Radio.Button 
+            style={BtnStyle} 
+            onClick={() => setToggleBtn(true)}
+          >
+            Wolphram App
+          </Radio.Button>
         </Radio.Group>
       </Row>
       <Container>
@@ -47,15 +57,13 @@ const App = () => {
           !toggleBtn ? (
             <Calculator />
           ) : (
-            <CalculatorWalfram />
+            <CalculatorWolfram />
           )
         }
       </Container>
     </Fragment>
   )
-}
-  
-  
+};
 
 
 export default App;

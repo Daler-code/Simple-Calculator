@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 
-const CalculatorResultWalfram = () => {
+const CalculatorResultWolfram = () => {
 
   return (
     <Container>
@@ -24,4 +24,4 @@ const CalculatorResultWalfram = () => {
   )
 };
 
-export default CalculatorResultWalfram;
+export default CalculatorResultWolfram;

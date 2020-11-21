@@ -1,0 +1,3 @@
+export default {
+  GET_WOLFRAM_RESULT: 'GET_WOLFRAM_RESULT'
+};
