@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,13 +16,23 @@ const Container = styled.div`
 `;
 
 
-const CalculatorResultWolfram = () => {
+const CalculatorResultWolfram = ({ calculationResult }) => {
 
   return (
     <Container>
-      <p>{' '}</p>
+      {
+        calculationResult && (
+          <p>{calculationResult}</p>
+        )
+      }
     </Container>
   )
 };
 
-export default CalculatorResultWolfram;
+
+const mapStateToProps = (state) => ({
+  calculationResult: state.wolframResultReducer.calculationResult
+});
+
+
+export default connect(mapStateToProps)(CalculatorResultWolfram);
