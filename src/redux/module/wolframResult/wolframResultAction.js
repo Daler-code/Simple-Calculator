@@ -5,7 +5,7 @@ var Client = require('node-wolfram');
 var Wolfram = new Client('J8P75Y-W6TVX5A2XV');
 
 
-const getWolframResult = (calculationInputs) => () => {
+const getWolframResult = (calculationInputs) => (dispatch) => {
   dispatch({
     type: actionTypes.GET_WOLFRAM_RESULT,
     payload: Wolfram.query(calculationInputs, function(err, result) {
